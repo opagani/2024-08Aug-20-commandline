@@ -8,7 +8,7 @@ parser = argparse.ArgumentParser()
 # Define some arguments
 parser.add_argument('-a', '--apple', type=int)
 parser.add_argument('-b', '--banana', type=int)
-parser.add_argument('-c', '--cucumber', type=str)
+parser.add_argument('-c', '--cucumber', type=str, default='(no value)')
 
 # Parse the user's arguments (in sys.args) according to the rules/args that we defined
 args = parser.parse_args()
