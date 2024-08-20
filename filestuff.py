@@ -13,7 +13,7 @@ class Filestuff(cmd.Cmd):
 
     def do_reverse(self, line):
         if line.count(' ') >= 1:
-            infilename, outfilename = line.split()
+            infilename, outfilename = line.split(maxsplit=1)
 
             if os.path.exists(infilename):
                 with open(outfilename, 'w') as outfile:
@@ -21,6 +21,8 @@ class Filestuff(cmd.Cmd):
                         outfile.write(one_line[::-1])
             else:
                 print(f'{infilename} does not exist; try again')
+        else:
+            print(f'Not enough arguments')
 
 
     def do_quit(self, line):
