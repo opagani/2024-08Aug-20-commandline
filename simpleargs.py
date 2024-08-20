@@ -2,4 +2,5 @@
 
 import sys
 
-print(sys.argv)
+for index, one_arg in enumerate(sys.argv):
+    print(f'{index}\t{one_arg}')
