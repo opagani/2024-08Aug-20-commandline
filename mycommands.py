@@ -3,7 +3,9 @@
 import cmd
 
 class MyMenu(cmd.Cmd):
-    pass
+    def do_hello(self, line):
+        print(f'Hello, {line}!')
+
 
 if __name__ == '__main__':
     MyMenu().cmdloop()
