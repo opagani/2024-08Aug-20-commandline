@@ -13,4 +13,4 @@ parser.add_argument('-f', '--file', type=argparse.FileType('r'))
 args = parser.parse_args()
 
 # Now I can open the file, and read "args.number" characters from it
-print(open(args.file, 'r').read(args.number))
+print(args.file.read(args.number))
