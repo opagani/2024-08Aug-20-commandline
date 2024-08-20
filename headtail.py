@@ -20,7 +20,8 @@ all_lines = args.file.readlines()
 if args.head:
     print(''.join(all_lines[:args.head]))
 
-print('----')
+if args.head and args.tail:
+    print('----')
 
 if args.tail:
     print(''.join(all_lines[-args.tail:]))
