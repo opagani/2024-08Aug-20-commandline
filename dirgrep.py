@@ -21,7 +21,7 @@ for one_filename in glob.glob(f'{args.dirname}/*'):
         try:
             for index, one_line in enumerate(open(one_filename)):
                 if args.text in one_line:
-                    print(f'{one_filename}/{index}: {one_line}')
+                    print(f'{one_filename}:{index}: {one_line}')
         except PermissionError as e:
             print(f'\tNo permission to open {one_filename}')
         except UnicodeDecodeError as e:
