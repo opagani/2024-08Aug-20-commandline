@@ -23,6 +23,6 @@ for one_filename in glob.glob(f'{args.dirname}/*'):
                 if args.text in one_line:
                     print(one_line)
         except PermissionError as e:
-            print(f'\tNo premission to open {one_filename}')
+            print(f'\tNo permission to open {one_filename}')
         except UnicodeDecodeError as e:
             print(f'\tNon-Unicode file {one_filename}')
