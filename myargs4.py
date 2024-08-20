@@ -16,6 +16,4 @@ args = parser.parse_args()
 print(args)
 
 # all of the arguments are now available as attributes on the "args" object
-print(f'{args.apple=}')
-print(f'{args.banana=}')
-print(f'{args.cucumber=}')
+print(open(args.file, 'r').read(args.number))
