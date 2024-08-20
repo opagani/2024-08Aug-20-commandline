@@ -2,6 +2,7 @@
 
 import cmd
 import os
+import rich
 
 class Filestuff(cmd.Cmd):
 
@@ -9,7 +10,7 @@ class Filestuff(cmd.Cmd):
         if os.path.exists(line):
             print(os.stat(line).st_size)
         else:
-            print(f'{line} does not exist; try again')
+            rich.print(f'[red][bold]{line}[/bold] does not exist; try again[/red]')
 
     def do_reverse(self, line):
         if line.count(' ') >= 1:
@@ -20,7 +21,7 @@ class Filestuff(cmd.Cmd):
                     for one_line in open(infilename):
                         outfile.write(one_line[::-1])
             else:
-                print(f'{infilename} does not exist; try again')
+                rich.print(f'[red][bold]{infilename}[/bold] does not exist; try again[/red]')
         else:
             print(f'Not enough arguments')
 
