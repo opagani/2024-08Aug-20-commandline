@@ -18,6 +18,11 @@ args = parser.parse_args()
 
 for one_filename in glob.glob(f'{args.dirname}/*'):
     if os.path.isfile(one_filename):
-        for one_line in open(one_filename):
-            if args.text in one_line:
-                print(one_line)
+        try:
+            for one_line in open(one_filename):
+                if args.text in one_line:
+                    print(one_line)
+        except PermissionError as e:
+            print(f'\tNo premission to open {one_filename}')
+        except UnicodeDecodeError as e:
+            print(f'\tNon-Unicode file {one_filename}')
