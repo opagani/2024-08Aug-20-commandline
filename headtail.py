@@ -1,9 +1,16 @@
 #!/usr/bin/env python3
 
+import argparse
 
+# create an argument parser object
+parser = argparse.ArgumentParser()
 
-    # Unix has two utilities, head and tail, which show us a number of lines at the start of a file, or the end of a file, respectively.
-    # Write a program, headtail, that takes three arguments:
-    #     --head, whose value is an integer indicating how many lines from the start of the file should be shown, with a default of 0
-    #     --tail, whose value is an integer indicating how many lines from the end of the file should be shown, with a default of 0
-    #     --file, the filename from which we'll read
+# Define some arguments
+parser.add_argument('-n', '--number', type=int, default=10)
+parser.add_argument('-f', '--file', type=argparse.FileType('r'))
+
+# Parse the user's arguments (in sys.args) according to the rules/args that we defined
+args = parser.parse_args()
+
+# Now I can open the file, and read "args.number" characters from it
+print(args.file.read(args.number))
