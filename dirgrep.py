@@ -17,7 +17,7 @@ args = parser.parse_args()
 # Now I can open the file, and read "args.number" characters from it
 
 for one_filename in glob.glob(f'{args.dirname}/*'):
-    if os.isfile(one_filename):
+    if os.path.isfile(one_filename):
         for one_line in open(one_filename):
             if args.text in one_line:
                 print(one_line)
