@@ -20,3 +20,13 @@ print(args)
 print(f'{args.first=}')
 print(f'{args.op=}')
 print(f'{args.second=}')
+
+# here, I can be confident that I got the arguments and got the operator
+# and the args are both floats!
+
+if args.op == '+':
+    print(f'{args.first} {args.op} {args.second} = {args.first+args.second}')
+elif args.op == '*':
+    print(f'{args.first} {args.op} {args.second} = {args.first*args.second}')
+else:
+    print(f'Unknown operator')
