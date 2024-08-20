@@ -6,6 +6,9 @@ import rich
 
 class Filestuff(cmd.Cmd):
 
+    def precmd(self, line):   # this function is run before any other fires; its return value replaces line
+        return line.lower()
+
     def do_length(self, line):
         if os.path.exists(line):
             print(os.stat(line).st_size)
