@@ -18,4 +18,5 @@ args = parser.parse_args()
 all_lines = args.file.readlines()
 
 print(all_lines[:args.head])
+print('----')
 print(all_lines[-args.tail:])
