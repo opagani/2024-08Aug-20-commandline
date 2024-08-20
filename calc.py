@@ -17,9 +17,9 @@ args = parser.parse_args()
 print(args)
 
 # all of the arguments are now available as attributes on the "args" object
-print(f'{args.first=}')
-print(f'{args.op=}')
-print(f'{args.second=}')
+# print(f'{args.first=}')
+# print(f'{args.op=}')
+# print(f'{args.second=}')
 
 # here, I can be confident that I got the arguments and got the operator
 # and the args are both floats!
