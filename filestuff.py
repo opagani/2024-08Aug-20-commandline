@@ -12,14 +12,15 @@ class Filestuff(cmd.Cmd):
             print(f'{line} does not exist; try again')
 
     def do_reverse(self, line):
-        infilename, outfilename = line.split()
+        if line.count(' ') >= 1:
+            infilename, outfilename = line.split()
 
-        if os.path.exists(infilename):
-            with open(outfilename, 'w') as outfile:
-                for one_line in open(infilename):
-                    outfile.write(one_line[::-1])
-        else:
-            print(f'{infilename} does not exist; try again')
+            if os.path.exists(infilename):
+                with open(outfilename, 'w') as outfile:
+                    for one_line in open(infilename):
+                        outfile.write(one_line[::-1])
+            else:
+                print(f'{infilename} does not exist; try again')
 
 
     def do_quit(self, line):
