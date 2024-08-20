@@ -19,7 +19,7 @@ args = parser.parse_args()
 for one_filename in glob.glob(f'{args.dirname}/*'):
     if os.path.isfile(one_filename):
         try:
-            for index, one_line in enumerate(open(one_filename)):
+            for index, one_line in enumerate(open(one_filename), 1):
                 if args.text in one_line:
                     print(f'{one_filename}:{index}: {one_line}', end='')
         except PermissionError as e:
