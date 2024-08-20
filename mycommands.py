@@ -8,6 +8,7 @@ class MyMenu(cmd.Cmd):
         print(f'Hello, {line}!')
 
     def do_quit(self, line):
+        print('Bye bye!')
         return True
 
 
