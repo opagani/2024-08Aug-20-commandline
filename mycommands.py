@@ -7,6 +7,9 @@ class MyMenu(cmd.Cmd):
         """Say hello to the world"""
         print(f'Hello, {line}!')
 
+    def do_quit(self, line):
+        return True
+
 
 if __name__ == '__main__':
     MyMenu().cmdloop()
