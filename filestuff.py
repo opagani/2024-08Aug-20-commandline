@@ -4,6 +4,7 @@ import cmd
 import os
 
 class Filestuff(cmd.Cmd):
+
     def do_length(self, line):
         if os.path.exists(line):
             print(os.stat(line).st_size)
