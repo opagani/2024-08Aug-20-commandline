@@ -7,7 +7,7 @@ parser = argparse.ArgumentParser()
 
 # Define some arguments
 parser.add_argument('-n', '--number', type=int, default=10)
-parser.add_argument('-f', '--file', type=str)
+parser.add_argument('-f', '--file', type=argparse.FileType('r'))
 
 # Parse the user's arguments (in sys.args) according to the rules/args that we defined
 args = parser.parse_args()
