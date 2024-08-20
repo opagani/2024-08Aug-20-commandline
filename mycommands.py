@@ -11,6 +11,10 @@ class MyMenu(cmd.Cmd):
         print('Bye bye!')
         return True
 
+    def do_EOF(self, line):
+        print('Bye bye, weirdo old hacker!')
+        return True
+
 
 if __name__ == '__main__':
     MyMenu().cmdloop()
