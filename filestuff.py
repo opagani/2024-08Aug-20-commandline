@@ -23,7 +23,7 @@ class Filestuff(cmd.Cmd):
             else:
                 rich.print(f'[red][bold]{infilename}[/bold] does not exist; try again[/red]')
         else:
-            print(f'Not enough arguments')
+            print(f'[red]Not enough arguments[/red]')
 
 
     def do_quit(self, line):
