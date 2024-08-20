@@ -8,4 +8,7 @@ class Filestuff(cmd.Cmd):
         print(os.stat(line))
 
     def do_quit(self, line):
-        return T
+        return True
+
+if __name__ == '__main__':
+    Filestuff().cmdloop()
