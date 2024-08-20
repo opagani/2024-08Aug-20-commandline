@@ -15,3 +15,8 @@ args = parser.parse_args()
 
 # print the args namespace object that we got
 print(args)
+
+# all of the arguments are now available as attributes on the "args" object
+print(f'{args.a=}')
+print(f'{args.b=}')
+print(f'{args.c=}')
