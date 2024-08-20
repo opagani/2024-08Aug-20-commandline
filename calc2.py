@@ -28,5 +28,11 @@ if args.op == '+':
     print(f'{args.first} {args.op} {args.second} = {args.first+args.second}')
 elif args.op == '*':
     print(f'{args.first} {args.op} {args.second} = {args.first*args.second}')
+elif args.op == '-':
+    print(f'{args.first} {args.op} {args.second} = {args.first-args.second}')
+elif args.op == '/':
+    print(f'{args.first} {args.op} {args.second} = {args.first/args.second}')
+elif args.op == '%':
+    print(f'{args.first} {args.op} {args.second} = {args.first%args.second}')
 else:
     print(f'Unknown operator')
