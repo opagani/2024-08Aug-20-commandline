@@ -7,7 +7,7 @@ parser = argparse.ArgumentParser()
 
 # Define some arguments
 parser.add_argument('-1', '--first', type=float)
-parser.add_argument('-o', '--op', type=str, default='+')
+parser.add_argument('-o', '--op', type=str, default='+', choices=list('+-*/'))
 parser.add_argument('-2', '--second', type=float)
 
 # Parse the user's arguments (in sys.args) according to the rules/args that we defined
