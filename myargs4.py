@@ -6,7 +6,8 @@ import argparse
 parser = argparse.ArgumentParser()
 
 # Define some arguments
-parser.add_argument('-c', '--cucumber', type=str, default='(no cucumbers today)')
+parser.add_argument('-n', '--number', type=int, default=10)
+parser.add_argument('-f', '--file', type=str)
 
 # Parse the user's arguments (in sys.args) according to the rules/args that we defined
 args = parser.parse_args()
