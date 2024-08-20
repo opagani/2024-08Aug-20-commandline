@@ -3,4 +3,4 @@
 import sys
 
 for index, one_arg in enumerate(sys.argv):
-    print(f'{index}\t{one_arg}')
+    print(f'{index}\t{one_arg}\t{type(one_arg)}')
