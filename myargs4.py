@@ -12,8 +12,5 @@ parser.add_argument('-f', '--file', type=str)
 # Parse the user's arguments (in sys.args) according to the rules/args that we defined
 args = parser.parse_args()
 
-# print the args namespace object that we got
-print(args)
-
-# all of the arguments are now available as attributes on the "args" object
+# Now I can open the file, and read "args.number" characters from it
 print(open(args.file, 'r').read(args.number))
